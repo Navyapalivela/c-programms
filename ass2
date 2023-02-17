@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int i=1,n,k,temp,esum=0,osum=0;
+    scanf("%d%d",&n,&k);
+    while(i<=n)
+    {
+        if(i%k==0)
+        printf("%d ",i);
+        if(i%k==0 && i%2==0)
+        esum=esum+i;
+        if(i%k==0 && i%2!=0)
+        osum=osum+i;
+        i++;
+    }
+    printf("\n%d %d",esum,osum);
+   
+
+    return 0;
+}
