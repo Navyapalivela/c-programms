@@ -1,0 +1,28 @@
+#include<stdio.h>
+void bubsort();
+main()
+{
+	bubsort();
+}
+void bubsort()
+{
+	int arr[]={34,12,89,78,90};
+	int len=sizeof(arr)/sizeof(int);
+	int i,t;
+	int T=0;
+	while(T<len-1)
+	{
+		for(i=0;i<len-1;i++)
+		{
+			if(arr[i]>arr[i+1])
+			{
+			  t=arr[i];
+			  arr[i]=arr[i+1];
+			  arr[i+1]=t;	
+			}
+		}
+		T++;	
+	}
+	for(i=0;i<len;i++)
+	printf("%d ",arr[i]);
+}
